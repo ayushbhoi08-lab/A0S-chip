@@ -1,0 +1,8 @@
+core            = rns_sub ((x-y) mod 12289, branch-free, 2-stage)
+part            = xc7a35tcsg324-1
+opt_design      = SKIPPED
+target_period   = 4.000 ns  (250.0 MHz probe)
+WNS (core setup)= 0.173 ns
+achieved_period = 3.827 ns
+ROUTED FMAX     = 261.3 MHz
+2-cycle latency = 7.65 ns

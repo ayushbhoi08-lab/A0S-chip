@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 10
+
+[engines]
+smtbmc boolector
+
+[script]
+read_verilog -formal rns108.v rns108_formal.v
+prep -top rns108_formal
+
+[files]
+rns108.v
+rns108_formal.v

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-06-28T01:15:33" hostname="Reaper" package="rns_add" id="0" name="default" tests="3" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Windows"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in rns_add_formal at rns_add_formal.v:25.53-25.73" time="0" type="ASSERT" location="rns_add_formal.v:25.53-25.73" id="_witness_.check_assert_rns_add_formal_v_25_20">
+</testcase>
+<testcase classname="default" name="Property ASSERT in rns_add_formal at rns_add_formal.v:33.40-33.64" time="0" type="ASSERT" location="rns_add_formal.v:33.40-33.64" id="_witness_.check_assert_rns_add_formal_v_33_26">
+</testcase>
+<testcase classname="default" name="Property ASSERT in rns_add_formal at rns_add_formal.v:50.46-50.64" time="0" type="ASSERT" location="rns_add_formal.v:50.46-50.64" id="_witness_.check_assert_rns_add_formal_v_50_37">
+</testcase>
+<system-out>SBY  1:15:31 [rns_add] Removing directory 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_add'.
+SBY  1:15:31 [rns_add] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_add.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_add\src\rns_add.v'.
+SBY  1:15:31 [rns_add] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_add_formal.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_add\src\rns_add_formal.v'.
+SBY  1:15:32 [rns_add] engine_0: smtbmc boolector
+SBY  1:15:32 [rns_add] base: starting process &quot;cd rns_add/src&amp; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  1:15:32 [rns_add] base: finished (returncode=0)
+SBY  1:15:32 [rns_add] prep: starting process &quot;cd rns_add/model&amp; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  1:15:32 [rns_add] prep: finished (returncode=0)
+SBY  1:15:32 [rns_add] smt2: starting process &quot;cd rns_add/model&amp; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  1:15:32 [rns_add] smt2: finished (returncode=0)
+SBY  1:15:32 [rns_add] engine_0: starting process &quot;cd rns_add&amp; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Solver: boolector
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY  1:15:32 [rns_add] engine_0: ##   0:00:00  Status: passed
+SBY  1:15:33 [rns_add] engine_0: finished (returncode=0)
+SBY  1:15:33 [rns_add] engine_0: Status returned by engine: pass
+SBY  1:15:33 [rns_add] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY  1:15:33 [rns_add] summary: Elapsed process time unvailable on Windows
+SBY  1:15:33 [rns_add] summary: engine_0 (smtbmc boolector) returned pass
+SBY  1:15:33 [rns_add] summary: engine_0 did not produce any traces
+SBY  1:15:33 [rns_add] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

@@ -1,0 +1,24 @@
+
+3. Printing statistics.
+
+=== rns_add ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       46 wires
+      290 wire bits
+        9 public wires
+       62 public wire bits
+        7 ports
+       46 port bits
+      132 cells
+        1   BUFG
+        9   CARRY4
+       31   FDRE
+       31   IBUF
+       11   INV
+       15   LUT2
+       15   LUT3
+        4   LUT6
+       15   OBUF
+

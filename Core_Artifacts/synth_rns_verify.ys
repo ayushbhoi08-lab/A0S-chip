@@ -1,0 +1,4 @@
+read_verilog rns_verify.v
+synth_xilinx -family xc7 -top rns_verify
+tee -o rns_verify_stat.txt stat
+tee -o rns_verify_ltp.txt ltp

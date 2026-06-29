@@ -1,0 +1,4 @@
+read_verilog ntt_mul12289.v
+synth_xilinx -family xc7 -top ntt_mul12289
+stat
+ltp

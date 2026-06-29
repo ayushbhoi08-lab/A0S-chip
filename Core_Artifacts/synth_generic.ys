@@ -1,0 +1,4 @@
+read_verilog rns108.v
+synth -flatten -top rns108
+abc -g AND
+tee -o stat_gates.txt stat

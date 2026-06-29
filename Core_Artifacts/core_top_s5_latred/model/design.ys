@@ -1,0 +1,8 @@
+# running in core_top_s5_latred/src/
+read_verilog -formal core_top.v opcode_decode.v result_mode.v rns_reduce.v tick_counter.v ntt_mul12289.v rns_add.v rns_sub.v rns_verify.v fold_hash.v core_top_s5_formal.v
+prep -top ctf_latred
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

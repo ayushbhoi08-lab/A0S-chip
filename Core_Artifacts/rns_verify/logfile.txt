@@ -1,0 +1,40 @@
+SBY  8:20:39 [rns_verify] Removing directory 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_verify'.
+SBY  8:20:39 [rns_verify] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_verify.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_verify\src\rns_verify.v'.
+SBY  8:20:39 [rns_verify] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_verify_formal.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_verify\src\rns_verify_formal.v'.
+SBY  8:20:39 [rns_verify] engine_0: smtbmc boolector
+SBY  8:20:39 [rns_verify] base: starting process "cd rns_verify/src& yosys -ql ../model/design.log ../model/design.ys"
+SBY  8:20:39 [rns_verify] base: finished (returncode=0)
+SBY  8:20:39 [rns_verify] prep: starting process "cd rns_verify/model& yosys -ql design_prep.log design_prep.ys"
+SBY  8:20:39 [rns_verify] prep: finished (returncode=0)
+SBY  8:20:39 [rns_verify] smt2: starting process "cd rns_verify/model& yosys -ql design_smt2.log design_smt2.ys"
+SBY  8:20:39 [rns_verify] smt2: finished (returncode=0)
+SBY  8:20:39 [rns_verify] engine_0: starting process "cd rns_verify& yosys-smtbmc -s boolector --presat --unroll --noprogress -t 10  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  8:20:39 [rns_verify] engine_0: ##   0:00:00  Solver: boolector
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY  8:20:40 [rns_verify] engine_0: ##   0:00:00  Status: passed
+SBY  8:20:40 [rns_verify] engine_0: finished (returncode=0)
+SBY  8:20:40 [rns_verify] engine_0: Status returned by engine: pass
+SBY  8:20:40 [rns_verify] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY  8:20:40 [rns_verify] summary: Elapsed process time unvailable on Windows
+SBY  8:20:40 [rns_verify] summary: engine_0 (smtbmc boolector) returned pass
+SBY  8:20:40 [rns_verify] summary: engine_0 did not produce any traces
+SBY  8:20:40 [rns_verify] DONE (PASS, rc=0)

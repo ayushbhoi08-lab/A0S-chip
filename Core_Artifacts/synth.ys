@@ -1,0 +1,4 @@
+read_verilog rns108.v
+synth_xilinx -family xc7 -top rns108 -flatten
+tee -o stat.txt stat
+tee -o ltp.txt ltp

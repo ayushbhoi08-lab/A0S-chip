@@ -1,0 +1,5 @@
+core            = rns3780 (4 dials, Z/3780)
+WNS (core setup)= -3.460 ns
+achieved_period = 7.460 ns
+ROUTED FMAX     = 134.0 MHz
+4-cycle latency = 29.84 ns

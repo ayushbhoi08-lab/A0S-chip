@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rns_sim.wdb" id="1">
+         <top_modules>
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/in_valid" type="logic">
+      <obj_property name="ElementShortName">in_valid</obj_property>
+      <obj_property name="ObjectShortName">in_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/x" type="array">
+      <obj_property name="ElementShortName">x[6:0]</obj_property>
+      <obj_property name="ObjectShortName">x[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/y" type="array">
+      <obj_property name="ElementShortName">y[6:0]</obj_property>
+      <obj_property name="ObjectShortName">y[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/out_valid" type="logic">
+      <obj_property name="ElementShortName">out_valid</obj_property>
+      <obj_property name="ObjectShortName">out_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/out" type="array">
+      <obj_property name="ElementShortName">out[6:0]</obj_property>
+      <obj_property name="ObjectShortName">out[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/v1" type="logic">
+      <obj_property name="ElementShortName">v1</obj_property>
+      <obj_property name="ObjectShortName">v1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/v2" type="logic">
+      <obj_property name="ElementShortName">v2</obj_property>
+      <obj_property name="ObjectShortName">v2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/v3" type="logic">
+      <obj_property name="ElementShortName">v3</obj_property>
+      <obj_property name="ObjectShortName">v3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/out_valid" type="logic">
+      <obj_property name="ElementShortName">out_valid</obj_property>
+      <obj_property name="ObjectShortName">out_valid</obj_property>
+   </wvobject>
+</wave_config>

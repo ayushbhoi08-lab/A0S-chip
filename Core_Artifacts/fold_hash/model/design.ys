@@ -1,0 +1,8 @@
+# running in fold_hash/src/
+read_verilog -formal fold_hash.v fold_hash_formal.v
+prep -top fold_hash_formal
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

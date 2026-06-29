@@ -1,0 +1,8 @@
+core            = rns_verify (x==y -> 1-bit flag, 1-stage)
+part            = xc7a35tcsg324-1
+opt_design      = applied
+path measured   = input->reg (no reg-to-reg path; I/O delay=0; comparator+pad)
+WNS             = -5.302 ns
+achieved_period = 9.302 ns
+implied fmax    = 107.5 MHz
+1-cycle latency = 9.30 ns

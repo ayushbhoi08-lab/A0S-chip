@@ -1,0 +1,8 @@
+core            = rns_add ((x+y) mod 12289, branch-free, 2-stage)
+part            = xc7a35tcsg324-1
+opt_design      = applied
+target_period   = 4.000 ns  (250.0 MHz probe)
+WNS (core setup)= -0.129 ns
+achieved_period = 4.129 ns
+ROUTED FMAX     = 242.2 MHz
+2-cycle latency = 8.26 ns

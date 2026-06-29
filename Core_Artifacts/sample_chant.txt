@@ -1,0 +1,5 @@
+# sample chant (laghu = lowercase a-z, guru = UPPERCASE A-Z; all else ignored)
+Aa aA Aaa AAa aAA
+agni mILe purohitaM
+yaG yasya devaM Rtvijam
+hotAraM ratnadhAtamam

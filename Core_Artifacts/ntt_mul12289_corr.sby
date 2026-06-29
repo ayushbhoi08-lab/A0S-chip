@@ -1,0 +1,11 @@
+[options]
+mode bmc
+depth 8
+[engines]
+smtbmc bitwuzla
+[script]
+read_verilog -formal ntt_mul12289.v ntt_mul12289_corr.v
+prep -top ntt_mul12289_corr
+[files]
+ntt_mul12289.v
+ntt_mul12289_corr.v

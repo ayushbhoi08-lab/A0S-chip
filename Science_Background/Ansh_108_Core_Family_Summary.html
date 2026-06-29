@@ -1,0 +1,423 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>The Ansh-108 Core - In Plain Words</title><style>
+@page {
+    size: A4;
+    margin: 20mm 18mm 18mm 18mm;
+}
+:root {
+    --ink:    #1c2733;
+    --muted:  #5a6b7b;
+    --accent: #1f4e79;   /* deep blue */
+    --accent2:#2e74b5;   /* lighter blue */
+    --rule:   #d7dee6;
+    --band:   #eef3f8;   /* table stripe */
+    --okgreen:#1a7f37;
+    --callout:#f4f7fb;
+}
+* { box-sizing: border-box; }
+body {
+    font-family: Georgia, "Cambria", "Times New Roman", serif;
+    font-size: 10.8pt;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+p { margin: 0 0 9px 0; text-align: justify; }
+em { color: var(--muted); }
+strong { color: var(--ink); }
+
+/* ---------- title block ---------- */
+.cover {
+    text-align: center;
+    padding: 6px 0 16px 0;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 20px;
+}
+.cover .eyebrow {
+    font-family: "Segoe UI", Arial, sans-serif;
+    letter-spacing: 3px;
+    font-size: 9pt;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 8px;
+}
+.cover h1 {
+    font-family: "Segoe UI Semibold", "Segoe UI", Arial, sans-serif;
+    font-size: 27pt;
+    line-height: 1.12;
+    color: var(--accent);
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+.cover .subtitle {
+    font-style: italic;
+    font-size: 13pt;
+    color: var(--muted);
+    margin: 0 0 12px 0;
+}
+.cover .byline {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 10pt;
+    color: var(--ink);
+}
+.lead {
+    background: var(--callout);
+    border-left: 3px solid var(--accent2);
+    padding: 12px 16px;
+    border-radius: 3px;
+    margin: 0 0 20px 0;
+    font-size: 10.3pt;
+}
+.lead em, .lead { color: #3c4a57; }
+
+/* ---------- headings ---------- */
+h2 {
+    font-family: "Segoe UI Semibold", "Segoe UI", Arial, sans-serif;
+    font-size: 15pt;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 26px 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--rule);
+    page-break-after: avoid;
+}
+h3 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 12pt;
+    color: var(--accent2);
+    font-weight: 600;
+    margin: 18px 0 7px 0;
+    page-break-after: avoid;
+}
+
+/* ---------- lists ---------- */
+ul { margin: 0 0 11px 0; padding-left: 22px; }
+li { margin: 0 0 5px 0; }
+
+/* ---------- blockquote (the big idea) ---------- */
+blockquote {
+    margin: 14px 0;
+    padding: 14px 20px;
+    background: linear-gradient(0deg, var(--callout), var(--callout));
+    border-left: 4px solid var(--accent);
+    border-radius: 3px;
+    font-size: 12pt;
+    font-style: italic;
+    color: var(--accent);
+}
+blockquote p { margin: 0; text-align: left; }
+
+/* ---------- tables ---------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0 16px 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 9.6pt;
+    page-break-inside: auto;
+}
+thead { display: table-header-group; }
+th {
+    background: var(--accent);
+    color: #ffffff;
+    text-align: left;
+    font-weight: 600;
+    padding: 8px 10px;
+    border: none;
+}
+td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+}
+tbody tr:nth-child(even) { background: var(--band); }
+tr { page-break-inside: avoid; }
+
+/* ---------- accents ---------- */
+.ok { color: var(--okgreen); font-weight: 700; }
+hr { border: none; border-top: 1px solid var(--rule); margin: 22px 0; }
+
+.signoff {
+    margin-top: 26px;
+    padding-top: 14px;
+    border-top: 2px solid var(--accent);
+    text-align: center;
+}
+.signoff em { font-size: 11.5pt; color: var(--accent); }
+.signoff .author {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin-top: 6px;
+    color: var(--ink);
+    font-weight: 600;
+}
+</style></head><body>
+<div class="cover"><div class="eyebrow">Project ANSH</div><h1>The Ansh-108 Core — In Plain Words</h1><div class="subtitle">What it is, what it can do, and how we got here</div><div class="byline">A project by Ayush &middot; Project ANSH &middot; written 25 June 2026 &middot; updated 28 June 2026</div></div><div class="lead"><p><em>This is the family-and-friends version. No equations you need to follow — just the idea, the honest results, and the road we walked to get them. Every number in here is a real measured or proven result, not a hope. Where something is </em><em>not</em><em> done yet, it says so plainly. That honesty is the whole point of the project.</em> <em>Update note (28 June): the first edition described the little "108 demonstrator" engine. Since then the full machine was actually built and tested end-to-end — all six of its operations, a clock that "can't lie," and the PC software that feeds it. Those new sections are marked </em><em>NEW</em><em>.</em></p></div>
+<h2>1. The one-sentence idea</h2>
+<blockquote>
+<p>Take the oldest grammar humans ever wrote (Panini's Sanskrit rules, ~2,500
+years old) and the newest kind of computer chip, and show they are really the
+<strong>same machine</strong> — and then actually build that machine and test it.</p>
+</blockquote>
+<p>The bridge between the two is a single number you already know from temple
+malas and prayer beads: <strong>108</strong>.</p>
+<hr />
+<h2>2. Why 108 — explained with no math</h2>
+<p>108 splits perfectly into <strong>4 × 27</strong>.</p>
+<p>Think of it like a lock with two dials — one dial with 4 positions, one with 27.
+Because 4 and 27 share no common factor, <strong>every single number from 0 to 107
+becomes its own unique pair of dial settings.</strong> No two numbers ever land on the
+same pair. And from the two dial settings you can always rebuild the original
+number, exactly, with zero guessing.</p>
+<p>That "zero guessing" is the magic trick. A normal computer constantly stops to
+ask <em>"which case is this? if this, then that…"</em> — millions of little forks in
+the road, each one a chance to stall. The Ansh-108 Core <strong>never asks.</strong> It runs
+the dials side by side, on separate lanes that never wait for each other, and
+snaps the answer back together at the end. No fork. No guess. No rounding.</p>
+<p>The name fits the idea. <strong>Ansh (amsha)</strong> means <em>a fragment that still carries the
+whole</em>. The machine breaks a whole value into honest fragments, carries them in
+parallel, and makes them whole again with nothing lost.</p>
+<p><strong>A note on two numbers (NEW).</strong> 108 is the <em>name and the soul</em>. But the real
+working engine uses a bigger special number, <strong>12289</strong>, because it leaves room
+for proper fingerprints <strong>and</strong> it happens to be the exact number that modern
+"unbreakable-by-future-computers" security is built on. So: <strong>108 is the
+identity; 12289 is the workhorse.</strong> Both are real and both were built.</p>
+<hr />
+<h2>3. What it can actually do (the honest list) — NEW, expanded</h2>
+<p>The full machine now does <strong>six clean operations</strong>, plus it keeps time:</p>
+<ul>
+<li><strong>Multiply, add, subtract</strong> — the carry-free, no-guessing arithmetic above.</li>
+<li><strong>Reduce</strong> — tidy a big number back into the dial system.</li>
+<li><strong>Check if two things are equal (VERIFY)</strong> — a fast yes/no, with no guessing.</li>
+<li><strong>Make a "fingerprint" (FOLD)</strong> — feed it a pattern (a chant written as
+  short/long beats, a file, a sensor stream) and it crushes the whole thing into
+  one fixed number. Same input → same fingerprint, every time. Change one beat,
+  or reorder the beats, and the fingerprint changes completely.</li>
+<li><strong>Keep an honest clock (NEW).</strong> A counter that only ever ticks <strong>forward</strong>,
+  wraps around after exactly one full cycle (a "Maha Yuga" of 4,320,000 ticks),
+  and that <strong>no command can set, rewind, or fake.</strong> It's a clock that can't lie
+  about <em>order</em> — useful for trustworthy timestamps.</li>
+</ul>
+<p>Two more honest strengths it has always had:</p>
+<ul>
+<li><strong>It does hundreds of these at once.</strong> Its real power is width, not single-job
+  speed — many little engines stamping in parallel.</li>
+<li><strong>It runs perfectly predictably.</strong> Same input → same output → same timing,
+  every single time. No jitter. That predictability is rare and valuable (and
+  good for security).</li>
+</ul>
+<hr />
+<h2>4. How we got here — the journey, step by step</h2>
+<p>We did not just <em>claim</em> it works. We took it from an idea all the way to real,
+routed chip layout and machine-checked proofs — testing at every rung and
+writing down the result even when it was humbling.</p>
+<h3>Part A — the little "108 demonstrator" (first edition)</h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What we did</th>
+<th>What we found</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>The math proof</strong></td>
+<td>Brute-force checked the "two dials never collide" claim over all 108 values and all 11,664 combinations.</td>
+<td><span class="ok">&#10003;</span> Perfect. The trick is real, not poetry.</td>
+</tr>
+<tr>
+<td><strong>The chip design (Verilog)</strong></td>
+<td>Wrote the true hardware blueprint and simulated it.</td>
+<td><span class="ok">&#10003;</span> All <strong>11,664</strong> combinations correct, <strong>0 errors</strong>, one stamp every clock tick.</td>
+</tr>
+<tr>
+<td><strong>Second opinion</strong></td>
+<td>Re-ran the exact blueprint in AMD/Xilinx's own professional simulator.</td>
+<td><span class="ok">&#10003;</span> Same result — two different tools agree.</td>
+</tr>
+<tr>
+<td><strong>Real chip layout</strong></td>
+<td>Ran the full professional flow real chip-makers use (on a real Artix-7 chip model).</td>
+<td><span class="ok">&#10003;</span> <strong>157.9 MHz</strong>, astonishingly small: <strong>51 logic cells, 0 multipliers</strong> — about <strong>400 copies</strong> fit on one ~$130 chip.</td>
+</tr>
+<tr>
+<td><strong>Machine proof</strong></td>
+<td>A proof engine checked correctness for <em>every</em> input and timing.</td>
+<td><span class="ok">&#10003;</span> <strong>3 theorems proven</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3>Part B — the full machine, actually built (NEW, 28 June)</h3>
+<p>Each operation was built and put through the same strict <strong>5-check gate</strong>:
+a hand proof in Python, a simulation, a machine proof, a "turn it into real
+gates" pass, and a full chip layout. Then they were wired into one chip.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What we did</th>
+<th>What we found</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>The rulebook</strong></td>
+<td>Wrote one master program that <em>defines</em> correct behaviour; everything else is checked against it.</td>
+<td><span class="ok">&#10003;</span> 17/17 self-checks.</td>
+</tr>
+<tr>
+<td><strong>Add / Subtract</strong></td>
+<td>Built and 5-checked them on the workhorse lane.</td>
+<td><span class="ok">&#10003;</span> All checks green; lay out at <strong>240–260 MHz</strong>.</td>
+</tr>
+<tr>
+<td><strong>Equal-check + Fingerprint</strong></td>
+<td>Built VERIFY and FOLD. The fingerprint's tidy-up step was checked on <strong>all 268,435,456 possible inputs</strong> — every single one.</td>
+<td><span class="ok">&#10003;</span> Exact. Fingerprint engine lays out around <strong>41 MHz</strong> (its feedback loop is the slow part — known, and improvable later).</td>
+</tr>
+<tr>
+<td><strong>Wire it all together</strong></td>
+<td>Built the decoder, the result manager, and the can't-lie clock, into one chip that speaks a simple 32-bit "packet" language.</td>
+<td><span class="ok">&#10003;</span> Replayed <strong>6,000 mixed commands</strong> with <strong>0 mistakes</strong>; <strong>13 separate properties machine-proven</strong>; whole chip lays out at <strong>42.1 MHz</strong> using only ~4% of a small chip.</td>
+</tr>
+<tr>
+<td><strong>The PC software</strong></td>
+<td>Built the program that turns a chant text file into the exact packets the chip eats, and reads the answer back.</td>
+<td><span class="ok">&#10003;</span> Tested over <strong>5,000+ chants</strong> end-to-end, <strong>0 mismatches</strong>; <strong>67/67</strong> software checks pass.</td>
+</tr>
+</tbody>
+</table>
+<p>The honest headline: the chip's <em>math and design are proven</em>, the whole pipeline
+(text file → chip → fingerprint) works in simulation, and the only thing left is
+loading it onto a physical board.</p>
+<hr />
+<h2>5. The equipment we used</h2>
+<p>Everything was done on <strong>one laptop</strong> (Windows 11) — no lab, no special
+hardware:</p>
+<ul>
+<li><strong>Vivado 2026.1</strong> (AMD/Xilinx) — the same professional chip-design suite the
+  industry uses, in its free mode (final layouts + speed numbers).</li>
+<li><strong>Icarus Verilog</strong> and <strong>Vivado's own simulator</strong> — two independent simulators,
+  so results were cross-checked, not taken on faith.</li>
+<li><strong>Yosys</strong> — open-source tool that turns the blueprint into real chip parts.</li>
+<li><strong>SymbiYosys + math-proof engines (boolector / bitwuzla)</strong> — the formal proof
+  tools that check correctness for <em>all</em> inputs, not just examples.</li>
+<li><strong>Python</strong> — the master "rulebook" model and all the PC software.</li>
+<li><strong>Target chip:</strong> Xilinx <strong>Artix-7 (xc7a35t)</strong> — the chip on a ~$130 hobbyist
+  board. We designed, simulated, synthesized, and laid it out for this chip.</li>
+<li><strong>Claude (Anthropic)</strong> as the engineering copilot throughout — writing and
+  running the code, the proofs, and these notes under Ayush's direction.</li>
+</ul>
+<p>The full set of files is saved in the <code>Ansh_108_Core_Artifacts</code> folder, so the
+whole thing can be re-run and re-checked by anyone.</p>
+<hr />
+<h2>6. The headline results, in one place</h2>
+<table>
+<thead>
+<tr>
+<th>What was tested</th>
+<th>How</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two-dial math (no collisions)</td>
+<td>brute force</td>
+<td><span class="ok">&#10003;</span> exact over all 108 values &amp; 11,664 products</td>
+</tr>
+<tr>
+<td>Fingerprint tidy-up step</td>
+<td>exhaustive check</td>
+<td><span class="ok">&#10003;</span> correct on <strong>all 268,435,456</strong> inputs</td>
+</tr>
+<tr>
+<td>Whole chip, mixed commands</td>
+<td>simulation replay</td>
+<td><span class="ok">&#10003;</span> <strong>6,000 / 0 mistakes</strong></td>
+</tr>
+<tr>
+<td>Whole chip, correctness &amp; timing</td>
+<td>machine proof</td>
+<td><span class="ok">&#10003;</span> <strong>13 properties proven</strong></td>
+</tr>
+<tr>
+<td>108 demonstrator — speed / size</td>
+<td>full chip layout</td>
+<td><strong>157.9 MHz</strong>, 51 cells, ~400 copies/chip</td>
+</tr>
+<tr>
+<td>Full integrated chip — speed / size</td>
+<td>full chip layout</td>
+<td><strong>42.1 MHz</strong>, ~4% of a small chip (fingerprint loop is the limiter)</td>
+</tr>
+<tr>
+<td>Add / Subtract — speed</td>
+<td>full chip layout</td>
+<td><strong>240–260 MHz</strong></td>
+</tr>
+<tr>
+<td>PC software, end-to-end</td>
+<td>5,000+ chants</td>
+<td><span class="ok">&#10003;</span> <strong>0 mismatches</strong>, 67/67 checks</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>7. The clock-watch and the uses — NEW</h2>
+<p><strong>A standalone "watch" is planned.</strong> Because the can't-lie clock already exists
+inside the chip, it can also become a small <strong>stand-alone time-keeper</strong> — a
+counter that runs forever, can't be rewound or faked, and tells you where you are
+in its cycle. The <em>base</em> of it is designed; building it is a planned next step.
+<strong>Honest limit:</strong> the chip counts <em>ticks</em> perfectly, but turning ticks into exact
+<em>seconds</em> needs a good quartz/atomic reference on the board — "never drifts" is
+not free. "Can't lie" means the count can't be forged, <strong>not</strong> that the seconds
+are atomic-perfect.</p>
+<p><strong>Where this kind of engine genuinely fits</strong> (honest tiers):</p>
+<ul>
+<li><strong>Strongest:</strong> a building block for <strong>future-proof security</strong> (the number
+  12289 is the real standard for "safe even against quantum computers"), and for
+  <strong>tamper-evident fingerprints + timestamps</strong> ("this exact data, in this exact
+  order, at this count").</li>
+<li><strong>Plausible, with more work:</strong> fingerprinting audio/chant patterns; fast
+  "have I seen this exact thing before?" lookups.</li>
+<li><strong>Speculative (kept honest, not promised):</strong> anything claiming it "replaces a
+  CPU," is "unhackable," or reads cosmic rhythms — those are <em>not</em> proven and we
+  don't sell them.</li>
+</ul>
+<hr />
+<h2>8. What it CANNOT do — read this part too</h2>
+<p>The project's rule is to be as clear about the limits as about the wins.</p>
+<ul>
+<li><strong>It is NOT a faster calculator than your laptop for one job.</strong> It wins by
+  doing <strong>hundreds at once</strong>, not by being fast at one. It's a <em>width</em> engine.</li>
+<li><strong>It only does add, subtract, multiply, equal-check cleanly.</strong> "Which is
+  bigger?", division, and bit-shuffling need extra steps and lose the magic — so
+  those are deliberately done by the PC, not the chip.</li>
+<li><strong>One fingerprint is still a smallish number.</strong> A long, truly collision-proof
+  fingerprint needs several of these chained together — the design allows it, but
+  we have not built the long version yet.</li>
+<li><strong>It is not a password/secret keeper by itself.</strong> A fingerprint proves data
+  wasn't changed; real secrecy needs keys and careful handling on top.</li>
+<li><strong>"Predictable timing" protects against one kind of leak, not all of them.</strong></li>
+<li><strong>No physical chip exists yet.</strong> Everything here is proven in simulation,
+  machine proof, and full layout — exactly how real chips are validated <em>before</em>
+  they're manufactured — but it has <strong>not</strong> yet run on a real board. That is the
+  honest current frontier.</li>
+<li><strong>"Sanskrit grammar = math" is still partly a hypothesis</strong> — real partial
+  support, full claim not proven, and we wrote down exactly where it holds.</li>
+</ul>
+<hr />
+<h2>9. Where it stands today</h2>
+<p>The first edition had a tiny proof-of-concept engine. <strong>Now the whole machine is
+built and proven in simulation:</strong> six operations, a clock that can't lie, all
+wired into one chip and machine-checked, plus the PC software that drives it from
+a plain text file — tested end-to-end over thousands of chants with zero
+mistakes. It is <strong>small, perfectly predictable, massively copyable, and honest</strong>
+about being a parallel-width engine rather than a single-speed champion.</p>
+<p>The next real-world rung is the same as before — loading it onto an actual FPGA
+board to watch it run in the physical world. Everything is staged and ready for
+that day.</p>
+<div class="signoff"><em>"The fragment remembers the whole." — the law the whole machine obeys.</em><div class="author">— Ayush, Project ANSH</div></div>
+</body></html>

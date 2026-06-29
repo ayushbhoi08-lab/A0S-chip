@@ -1,0 +1,9 @@
+# A0S ref 07 -- the 4 cardinal disa ROLLs on the 9x12=108 mandala.
+#   @1 Purva(E)  @3 Dakshina(S)  @5 Pascima(W)  @7 Uttara(N)
+# A direction operator makes the mandala directional: the pattern is laid into the
+# 108 grid (sunya-padded), rolled, then folded. Here a half-grid of guru rolls East.
+AAAAAAAAAAAA
+AAAAAAAAAAAA
+AAAAAAAAAAAA
+@1
+.

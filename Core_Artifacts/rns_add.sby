@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 12
+
+[engines]
+smtbmc boolector
+
+[script]
+read_verilog -formal rns_add.v rns_add_formal.v
+prep -top rns_add_formal
+
+[files]
+rns_add.v
+rns_add_formal.v

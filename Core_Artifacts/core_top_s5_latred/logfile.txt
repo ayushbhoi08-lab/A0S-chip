@@ -1,0 +1,51 @@
+SBY 14:04:26 [core_top_s5_latadd] Removing directory 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latadd'.
+SBY 14:04:27 [core_top_s5_latsub] Removing directory 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latsub'.
+SBY 14:04:27 [core_top_s5_latred] Removing directory 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\core_top.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\opcode_decode.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\opcode_decode.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\result_mode.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\result_mode.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_reduce.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\rns_reduce.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\tick_counter.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\tick_counter.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\ntt_mul12289.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\ntt_mul12289.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_add.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\rns_add.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_sub.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\rns_sub.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_verify.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\rns_verify.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\fold_hash.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\fold_hash.v'.
+SBY 14:04:27 [core_top_s5_latred] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_formal.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_s5_latred\src\core_top_s5_formal.v'.
+SBY 14:04:27 [core_top_s5_latred] engine_0: smtbmc boolector
+SBY 14:04:27 [core_top_s5_latred] base: starting process "cd core_top_s5_latred/src& yosys -ql ../model/design.log ../model/design.ys"
+SBY 14:04:29 [core_top_s5_latred] base: finished (returncode=0)
+SBY 14:04:29 [core_top_s5_latred] prep: starting process "cd core_top_s5_latred/model& yosys -ql design_prep.log design_prep.ys"
+SBY 14:04:31 [core_top_s5_latred] prep: finished (returncode=0)
+SBY 14:04:31 [core_top_s5_latred] smt2: starting process "cd core_top_s5_latred/model& yosys -ql design_smt2.log design_smt2.ys"
+SBY 14:04:31 [core_top_s5_latred] smt2: finished (returncode=0)
+SBY 14:04:31 [core_top_s5_latred] engine_0: starting process "cd core_top_s5_latred& yosys-smtbmc -s boolector --presat --unroll --noprogress -t 10  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Solver: boolector
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 14:04:31 [core_top_s5_latred] engine_0: ##   0:00:00  Status: passed
+SBY 14:04:31 [core_top_s5_latred] engine_0: finished (returncode=0)
+SBY 14:04:31 [core_top_s5_latred] engine_0: Status returned by engine: pass
+SBY 14:04:31 [core_top_s5_latred] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:04 (4)
+SBY 14:04:31 [core_top_s5_latred] summary: Elapsed process time unvailable on Windows
+SBY 14:04:31 [core_top_s5_latred] summary: engine_0 (smtbmc boolector) returned pass
+SBY 14:04:31 [core_top_s5_latred] summary: engine_0 did not produce any traces
+SBY 14:04:31 [core_top_s5_latred] DONE (PASS, rc=0)

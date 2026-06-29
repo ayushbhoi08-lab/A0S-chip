@@ -1,0 +1,7 @@
+part            = xc7a35tcsg324-1
+opt_design      = applied
+target_period   = 4.000 ns  (250.0 MHz probe)
+WNS (core setup)= -2.510 ns
+achieved_period = 6.510 ns
+ROUTED FMAX     = 153.6 MHz
+6-cycle latency = 39.06 ns

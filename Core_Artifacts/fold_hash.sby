@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 6
+
+[engines]
+smtbmc boolector
+
+[script]
+read_verilog -formal fold_hash.v fold_hash_formal.v
+prep -top fold_hash_formal
+
+[files]
+fold_hash.v
+fold_hash_formal.v

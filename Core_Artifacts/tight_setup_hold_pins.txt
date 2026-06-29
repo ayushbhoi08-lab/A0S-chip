@@ -1,0 +1,32 @@
++====================+===================+=====================+
+| Launch Setup Clock | Launch Hold Clock | Pin                 |
++====================+===================+=====================+
+| clk                | clk               | u_fold/h_reg[9]/D   |
+| clk                | clk               | u_fold/h_reg[6]/D   |
+| clk                | clk               | u_fold/h_reg[2]/D   |
+| clk                | clk               | u_fold/h_reg[5]/D   |
+| clk                | clk               | u_fold/h_reg[4]/D   |
+| clk                | clk               | u_fold/h_reg[1]/D   |
+| clk                | clk               | u_fold/h_reg[7]/D   |
+| clk                | clk               | u_fold/h_reg[10]/D  |
+| clk                | clk               | u_fold/h_reg[3]/D   |
+| clk                | clk               | u_fold/h_reg[8]/D   |
+| clk                | clk               | u_fold/h_reg[0]/D   |
+| clk                | clk               | u_fold/h_reg[12]/D  |
+| clk                | clk               | u_fold/h_reg[11]/D  |
+| clk                | clk               | u_fold/h_reg[13]/D  |
+| clk                | clk               | u_red/out_reg[12]/D |
+| clk                | clk               | u_red/out_reg[9]/D  |
+| clk                | clk               | u_red/out_reg[8]/D  |
+| clk                | clk               | u_red/out_reg[13]/D |
+| clk                | clk               | u_red/out_reg[5]/D  |
+| clk                | clk               | u_red/out_reg[10]/D |
+| clk                | clk               | u_red/out_reg[11]/D |
+| clk                | clk               | u_red/out_reg[7]/D  |
+| clk                | clk               | u_red/out_reg[2]/D  |
+| clk                | clk               | u_red/out_reg[6]/D  |
+| clk                | clk               | u_red/out_reg[4]/D  |
+| clk                | clk               | u_red/out_reg[3]/D  |
+| clk                | clk               | u_red/out_reg[0]/D  |
+| clk                | clk               | u_red/out_reg[1]/D  |
++--------------------+-------------------+---------------------+

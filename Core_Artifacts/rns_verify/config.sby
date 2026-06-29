@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 10
+
+[engines]
+smtbmc boolector
+
+[script]
+read_verilog -formal rns_verify.v rns_verify_formal.v
+prep -top rns_verify_formal
+
+[files]
+rns_verify.v
+rns_verify_formal.v

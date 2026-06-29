@@ -1,0 +1,8 @@
+core            = fold_hash (h<-(h*108+data) mod 12289, 1-stage)
+part            = xc7a35tcsg324-1
+opt_design      = applied
+target_period   = 6.000 ns  (166.7 MHz probe)
+WNS (core setup)= -18.277 ns
+achieved_period = 24.277 ns
+ROUTED FMAX     = 41.2 MHz
+1-cycle latency = 24.28 ns

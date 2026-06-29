@@ -1,0 +1,4 @@
+# A0S ref 01 -- basic data + bindu
+# laghu = lowercase (bit 0), guru = UPPERCASE (bit 1)
+aAaA Abba
+.

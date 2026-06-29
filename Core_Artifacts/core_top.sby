@@ -1,0 +1,39 @@
+[tasks]
+quiet
+bindu
+tick
+latmul
+latfold
+
+[options]
+mode bmc
+depth 10
+quiet:   depth 8
+bindu:   depth 8
+tick:    depth 8
+latmul:  depth 16
+latfold: depth 10
+
+[engines]
+smtbmc boolector
+
+[script]
+read_verilog -formal core_top.v opcode_decode.v result_mode.v rns_reduce.v tick_counter.v ntt_mul12289.v rns_add.v rns_sub.v rns_verify.v fold_hash.v core_top_formal.v
+quiet:   prep -top ctf_quiet
+bindu:   prep -top ctf_bindu
+tick:    prep -top ctf_tick
+latmul:  prep -top ctf_latmul
+latfold: prep -top ctf_latfold
+
+[files]
+core_top.v
+opcode_decode.v
+result_mode.v
+rns_reduce.v
+tick_counter.v
+ntt_mul12289.v
+rns_add.v
+rns_sub.v
+rns_verify.v
+fold_hash.v
+core_top_formal.v

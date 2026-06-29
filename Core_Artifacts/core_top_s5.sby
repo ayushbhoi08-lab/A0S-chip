@@ -1,0 +1,48 @@
+[tasks]
+latadd
+latsub
+latred
+latver
+lattick
+interlock
+ready
+reserved
+
+[options]
+mode bmc
+depth 12
+latadd:    depth 12
+latsub:    depth 12
+latred:    depth 10
+latver:    depth 10
+lattick:   depth 10
+interlock: depth 18
+ready:     depth 12
+reserved:  depth 10
+
+[engines]
+smtbmc boolector
+
+[script]
+read_verilog -formal core_top.v opcode_decode.v result_mode.v rns_reduce.v tick_counter.v ntt_mul12289.v rns_add.v rns_sub.v rns_verify.v fold_hash.v core_top_s5_formal.v
+latadd:    prep -top ctf_latadd
+latsub:    prep -top ctf_latsub
+latred:    prep -top ctf_latred
+latver:    prep -top ctf_latver
+lattick:   prep -top ctf_lattick
+interlock: prep -top ctf_interlock
+ready:     prep -top ctf_ready
+reserved:  prep -top ctf_reserved
+
+[files]
+core_top.v
+opcode_decode.v
+result_mode.v
+rns_reduce.v
+tick_counter.v
+ntt_mul12289.v
+rns_add.v
+rns_sub.v
+rns_verify.v
+fold_hash.v
+core_top_s5_formal.v

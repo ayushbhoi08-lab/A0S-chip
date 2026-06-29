@@ -1,0 +1,6 @@
+# A0S ref 05 -- sunya (0) clears the current mandala buffer (the void).
+# The first block of data is erased by 0, so only "bbbb" is folded at the bindu.
+AAAAAAAA
+0
+bbbb
+.

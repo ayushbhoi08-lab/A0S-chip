@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 16
+
+[engines]
+smtbmc boolector
+
+[script]
+read_verilog -formal rns41580p.v rns41580p_formal.v
+prep -top rns41580p_formal
+
+[files]
+rns41580p.v
+rns41580p_formal.v

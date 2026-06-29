@@ -1,0 +1,4 @@
+read_verilog rns_sub.v
+synth_xilinx -family xc7 -top rns_sub
+tee -o rns_sub_stat.txt stat
+tee -o rns_sub_ltp.txt ltp

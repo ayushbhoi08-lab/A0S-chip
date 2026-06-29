@@ -1,0 +1,4 @@
+read_verilog rns41580.v
+synth_xilinx -family xc7 -top rns41580
+stat
+ltp

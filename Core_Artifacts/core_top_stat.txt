@@ -1,0 +1,248 @@
+
+12. Printing statistics.
+
+=== core_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      105 wires
+      516 wire bits
+       56 public wires
+      322 public wire bits
+       15 ports
+       92 port bits
+      201 cells
+        1   BUFG
+       24   FDRE
+        4   FDSE
+       36   IBUF
+        8   LUT2
+       23   LUT3
+        2   LUT4
+       15   LUT5
+       28   LUT6
+        3   MUXF7
+        1   MUXF8
+       56   OBUF
+        9 submodules
+        1   fold_hash
+        1   ntt_mul12289
+        1   opcode_decode
+        1   result_mode
+        1   rns_add
+        1   rns_reduce
+        1   rns_sub
+        1   rns_verify
+        1   tick_counter
+
+=== fold_hash ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      113 wires
+     1407 wire bits
+       19 public wires
+      343 public wire bits
+        7 ports
+       47 port bits
+      209 cells
+       35   CARRY4
+        6   DSP48E1
+       14   FDRE
+        1   FDSE
+       38   INV
+       50   LUT2
+       29   LUT3
+        2   LUT4
+        4   LUT5
+       30   LUT6
+
+=== ntt_mul12289 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       38 wires
+      536 wire bits
+       15 public wires
+      168 public wire bits
+        7 ports
+       46 port bits
+      126 cells
+        9   CARRY4
+        4   DSP48E1
+       66   FDRE
+       11   INV
+       16   LUT2
+       15   LUT3
+        1   LUT4
+        4   LUT6
+
+=== opcode_decode ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       18 wires
+      106 wire bits
+       18 public wires
+      106 public wire bits
+       18 ports
+      106 port bits
+       13 cells
+       13   LUT4
+
+=== result_mode ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       16 wires
+       60 wire bits
+       14 public wires
+       58 public wire bits
+       13 ports
+       57 port bits
+       30 cells
+       27   FDRE
+        2   LUT2
+        1   LUT4
+
+=== rns_add ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       26 wires
+      243 wire bits
+        9 public wires
+       62 public wire bits
+        7 ports
+       46 port bits
+       85 cells
+        9   CARRY4
+       31   FDRE
+       11   INV
+       15   LUT2
+       15   LUT3
+        4   LUT6
+
+=== rns_reduce ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       46 wires
+      587 wire bits
+        6 public wires
+       46 public wire bits
+        6 ports
+       46 port bits
+       96 cells
+       14   CARRY4
+        3   DSP48E1
+       15   FDRE
+       12   INV
+       28   LUT2
+       14   LUT3
+        1   LUT4
+        1   LUT5
+        8   LUT6
+
+=== rns_sub ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       20 wires
+      227 wire bits
+        9 public wires
+       62 public wire bits
+        7 ports
+       46 port bits
+       70 cells
+        8   CARRY4
+       31   FDRE
+        3   INV
+       14   LUT2
+       14   LUT3
+
+=== rns_verify ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       42 wire bits
+        7 public wires
+       33 public wire bits
+        7 ports
+       33 port bits
+       11 cells
+        2   FDRE
+        2   LUT4
+        6   LUT6
+        1   MUXF7
+
+=== tick_counter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       21 wires
+      142 wire bits
+        5 public wires
+       25 public wire bits
+        5 ports
+       25 port bits
+       36 cells
+        7   CARRY4
+       23   FDRE
+        3   INV
+        3   LUT6
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+      877 core_top
+      209 fold_hash
+      126 ntt_mul12289
+       13 opcode_decode
+       30 result_mode
+       85 rns_add
+       96 rns_reduce
+       70 rns_sub
+       11 rns_verify
+       36 tick_counter
+
+        +----------Count including submodules.
+        | 
+      413 wires
+     3866 wire bits
+      158 public wires
+     1225 public wire bits
+       92 ports
+      544 port bits
+        - memories
+        - memory bits
+        - processes
+      877 cells
+        1   BUFG
+       82   CARRY4
+       13   DSP48E1
+      233   FDRE
+        5   FDSE
+       36   IBUF
+       78   INV
+      133   LUT2
+      110   LUT3
+       22   LUT4
+       20   LUT5
+       83   LUT6
+        4   MUXF7
+        1   MUXF8
+       56   OBUF
+        9 submodules
+        1   fold_hash
+        1   ntt_mul12289
+        1   opcode_decode
+        1   result_mode
+        1   rns_add
+        1   rns_reduce
+        1   rns_sub
+        1   rns_verify
+        1   tick_counter
+

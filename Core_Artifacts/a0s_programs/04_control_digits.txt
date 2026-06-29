@@ -1,0 +1,6 @@
+# A0S ref 04 -- the Sanskrit control numerals eka..nava (1..9), each REPEATS the
+# next repeatable token. Here each digit repeats a guru syllable:
+#   1=eka 2=dvi 3=tri 4=catur 5=panca 6=sas 7=sapta 8=asta 9=nava
+1A 2A 3A 4A 5A 6A 7A 8A 9A
+# total guru bits = 1+2+3+4+5+6+7+8+9 = 45
+.

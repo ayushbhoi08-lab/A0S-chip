@@ -1,0 +1,4 @@
+read_verilog rns_add.v
+synth_xilinx -family xc7 -top rns_add
+tee -o rns_add_stat.txt stat
+tee -o rns_add_ltp.txt ltp

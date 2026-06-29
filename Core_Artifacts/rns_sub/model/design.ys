@@ -1,0 +1,8 @@
+# running in rns_sub/src/
+read_verilog -formal rns_sub.v rns_sub_formal.v
+prep -top rns_sub_formal
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

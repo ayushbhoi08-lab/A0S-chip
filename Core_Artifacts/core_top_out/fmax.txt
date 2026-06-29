@@ -1,0 +1,7 @@
+core            = core_top (integrated Path-A: decode+datapath+FSM+tick)
+part            = xc7a35tcsg324-1
+opt_design      = applied
+target_period   = 8.000 ns  (125.0 MHz probe)
+WNS (core setup)= -15.736 ns
+achieved_period = 23.736 ns
+ROUTED FMAX     = 42.1 MHz

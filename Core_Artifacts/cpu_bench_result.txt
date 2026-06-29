@@ -1,0 +1,9 @@
+--- run 1 ---
+q=41580   latency/op =   5.53 ns   1-core thru =    683 M/s   8-core thru =    2526 M/s
+q=12289   latency/op =   5.37 ns   1-core thru =   1175 M/s   8-core thru =    4285 M/s
+--- run 2 ---
+q=41580   latency/op =   3.30 ns   1-core thru =   1157 M/s   8-core thru =    4231 M/s
+q=12289   latency/op =   3.27 ns   1-core thru =   1151 M/s   8-core thru =    4241 M/s
+--- run 3 ---
+q=41580   latency/op =   3.28 ns   1-core thru =   1169 M/s   8-core thru =    4290 M/s
+q=12289   latency/op =   3.30 ns   1-core thru =   1155 M/s   8-core thru =    4272 M/s

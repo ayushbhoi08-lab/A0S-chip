@@ -1,0 +1,998 @@
+{
+  "$schema": "https://raw.githubusercontent.com/YosysHQ/yosys/main/misc/jny.schema.json",
+  "generator": "Yosys 0.66+179 (git sha1 e74db6dea, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 13.2.1)",
+  "version": "0.0.1",
+  "invocation": "write_jny -no-connections ../model/design.json ",
+  "features": ["attributes", "properties"],
+  "modules": [
+      {
+        "name": "fold_hash",
+        "cell_sorts": [
+          {
+            "type": "$sub",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [21, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [22, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [23, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$sub$fold_hash.v:44$25",
+                  "attributes": {
+                    "src": "fold_hash.v:44.20-44.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000010101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000010110",
+                    "Y_WIDTH": "00000000000000000000000000010111"
+                  }
+                },
+                {
+                  "name": "$sub$fold_hash.v:44$39",
+                  "attributes": {
+                    "src": "fold_hash.v:44.20-44.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000011100",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000011101",
+                    "Y_WIDTH": "00000000000000000000000000011110"
+                  }
+                },
+                {
+                  "name": "$sub$fold_hash.v:45$27",
+                  "attributes": {
+                    "src": "fold_hash.v:45.37-45.42"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000001110"
+                  }
+                },
+                {
+                  "name": "$sub$fold_hash.v:45$41",
+                  "attributes": {
+                    "src": "fold_hash.v:45.37-45.42"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000001110"
+                  }
+                },
+                {
+                  "name": "$sub$fold_hash.v:54$8",
+                  "attributes": {
+                    "src": "fold_hash.v:54.38-54.43"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000001110"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [14, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [14, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [14, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$70",
+                  "attributes": {
+                    "src": "fold_hash.v:58.18-58.25|fold_hash.v:58.14-58.44"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001110"
+                  }
+                },
+                {
+                  "name": "$procmux$73",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "fold_hash.v:57.13-57.25|fold_hash.v:57.9-58.44"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001110"
+                  }
+                },
+                {
+                  "name": "$ternary$fold_hash.v:45$29",
+                  "attributes": {
+                    "src": "fold_hash.v:45.25-45.53"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001110"
+                  }
+                },
+                {
+                  "name": "$ternary$fold_hash.v:45$43",
+                  "attributes": {
+                    "src": "fold_hash.v:45.25-45.53"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001110"
+                  }
+                },
+                {
+                  "name": "$ternary$fold_hash.v:54$10",
+                  "attributes": {
+                    "src": "fold_hash.v:54.26-54.54"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001110"
+                  }
+                },
+                {
+                  "name": "$ternary$fold_hash.v:59$15",
+                  "attributes": {
+                    "src": "fold_hash.v:59.22-59.53"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$79",
+                  "attributes": {
+                    "src": "fold_hash.v:56.5-60.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$80",
+                  "attributes": {
+                    "src": "fold_hash.v:56.5-60.8"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001110"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$not$fold_hash.v:59$13",
+                  "attributes": {
+                    "src": "fold_hash.v:59.46-59.52"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mul",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [21, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [15, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [36, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$mul$fold_hash.v:42$23",
+                  "attributes": {
+                    "src": "fold_hash.v:42.20-42.26"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000010101",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001111",
+                    "Y_WIDTH": "00000000000000000000000000100100"
+                  }
+                },
+                {
+                  "name": "$mul$fold_hash.v:42$37",
+                  "attributes": {
+                    "src": "fold_hash.v:42.20-42.26"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000011100",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001111",
+                    "Y_WIDTH": "00000000000000000000000000101011"
+                  }
+                },
+                {
+                  "name": "$mul$fold_hash.v:44$24",
+                  "attributes": {
+                    "src": "fold_hash.v:44.24-44.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000010110"
+                  }
+                },
+                {
+                  "name": "$mul$fold_hash.v:44$38",
+                  "attributes": {
+                    "src": "fold_hash.v:44.24-44.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001111",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000011101"
+                  }
+                },
+                {
+                  "name": "$mul$fold_hash.v:50$5",
+                  "attributes": {
+                    "src": "fold_hash.v:50.26-50.31"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000111",
+                    "Y_WIDTH": "00000000000000000000000000010101"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$fold_hash.v:57$12",
+                  "attributes": {
+                    "src": "fold_hash.v:57.13-57.25"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$ge",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [30, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [14, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$ge$fold_hash.v:45$26",
+                  "attributes": {
+                    "src": "fold_hash.v:45.26-45.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000011110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ge$fold_hash.v:45$40",
+                  "attributes": {
+                    "src": "fold_hash.v:45.26-45.32"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000011110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ge$fold_hash.v:54$7",
+                  "attributes": {
+                    "src": "fold_hash.v:54.27-54.33"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001111",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$and$fold_hash.v:59$14",
+                  "attributes": {
+                    "src": "fold_hash.v:59.36-59.52"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$add",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [14, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [14, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [15, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$add$fold_hash.v:53$6",
+                  "attributes": {
+                    "src": "fold_hash.v:53.26-53.33"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000001111"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "src": "fold_hash.v:21.1-61.10"
+        }
+      },
+      {
+        "name": "fold_hash_formal",
+        "cell_sorts": [
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$64",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:35.13-35.40|fold_hash_formal.v:35.9-36.33"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$68",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:24.31-24.38|fold_hash_formal.v:24.27-24.59"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$ternary$fold_hash_formal.v:28$51",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:28.33-28.64"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$not$fold_hash_formal.v:28$49",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:28.57-28.63"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$75",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:33.5-33.66"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$76",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:33.5-33.66"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$77",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:28.5-28.65"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$78",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:21.5-21.43"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$lt",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [14, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [14, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$lt$fold_hash_formal.v:24$47",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:24.48-24.57"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000001110",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$fold_hash_formal.v:35$57",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:35.25-35.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "fold_hash",
+            "ports": [
+                {
+                  "name": "clk",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "data",
+                  "direction": "io",
+                  "range": [28, 0]
+                },
+                {
+                  "name": "flush",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "fold_en",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "h",
+                  "direction": "",
+                  "range": [14, 0]
+                },
+                {
+                  "name": "out_valid",
+                  "direction": "",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "rst",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "dut",
+                  "attributes": {
+                    "module_not_derived": "00000000000000000000000000000001",
+                    "src": "fold_hash_formal.v:16.15-17.61"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$check",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "ARGS",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "TRG",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "_witness_.check_assert_fold_hash_formal_v_24_46",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_fold_hash_formal_v_24_46",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "fold_hash_formal.v:24.40-24.58"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_fold_hash_formal_v_29_53",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_fold_hash_formal_v_29_53",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "fold_hash_formal.v:29.40-29.64"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assert_fold_hash_formal_v_36_59",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assert_fold_hash_formal_v_36_59",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "fold_hash_formal.v:36.13-36.32"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assert",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": "1",
+                    "TRG_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "_witness_.check_assume_fold_hash_formal_v_19_62",
+                  "attributes": {
+                    "hdlname": "_witness_ check_assume_fold_hash_formal_v_19_62",
+                    "keep": "00000000000000000000000000000001",
+                    "src": "fold_hash_formal.v:19.13-19.25"
+                  },
+                  "parameters": {
+                    "ARGS_WIDTH": "00000000000000000000000000000000",
+                    "FLAVOR": "assume",
+                    "FORMAT": true,
+                    "PRIORITY": "11111111111111111111111111111111",
+                    "TRG_ENABLE": "00000000000000000000000000000001",
+                    "TRG_POLARITY": true,
+                    "TRG_WIDTH": "00000000000000000000000000000000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$fold_hash_formal.v:35$58",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:35.13-35.40"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$fold_hash_formal.v:29$54",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:29.48-29.63"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$fold_hash_formal.v:36$60",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:36.21-36.31"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001110",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$and$fold_hash_formal.v:28$50",
+                  "attributes": {
+                    "src": "fold_hash_formal.v:28.47-28.63"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "top": "00000000000000000000000000000001",
+            "src": "fold_hash_formal.v:11.1-40.10"
+        }
+      }
+  ]
+}

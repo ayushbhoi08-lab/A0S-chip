@@ -1,0 +1,8 @@
+#####################################################################
+# A0S ref 06 -- comments. A '#' runs to end of line. Comments may carry
+# Sanskrit/diacritics (PUrva, DakSiNa, IzAna) -- ignored by the lexer.
+#####################################################################
+aA  # inline comment after data is fine
+bB  # the data on each line is folded; the comment is dropped
+.   # bindu ends the mandala
+# trailing comment, no data after it

@@ -1,0 +1,6 @@
+# A0S ref 03 -- HOLD (Enter). Newlines are host clock/LED pauses only; they do
+# NOT split feet or fold anything, so these three pada lines fold as one stream.
+aAaAaAaAaAaA
+AbAbAbAbAbAb
+aabbAABBaabb
+.

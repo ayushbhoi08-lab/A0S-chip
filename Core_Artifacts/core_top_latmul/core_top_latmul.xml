@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-06-28T13:20:37" hostname="Reaper" package="core_top" id="0" name="latmul" tests="1" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Windows"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="latmul" name="build execution" time="0">
+</testcase>
+<testcase classname="latmul" name="Property ASSERT in ctf_latmul at core_top_formal.v:98.40-98.61" time="0" type="ASSERT" location="core_top_formal.v:98.40-98.61" id="_witness_.check_assert_core_top_formal_v_98_235">
+</testcase>
+<system-out>SBY 13:20:32 [core_top_quiet] Removing directory 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_quiet'.
+SBY 13:20:34 [core_top_bindu] Removing directory 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_bindu'.
+SBY 13:20:34 [core_top_tick] Removing directory 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_tick'.
+SBY 13:20:34 [core_top_latmul] Removing directory 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\core_top.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\opcode_decode.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\opcode_decode.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\result_mode.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\result_mode.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_reduce.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\rns_reduce.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\tick_counter.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\tick_counter.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\ntt_mul12289.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\ntt_mul12289.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_add.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\rns_add.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_sub.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\rns_sub.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\rns_verify.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\rns_verify.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\fold_hash.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\fold_hash.v'.
+SBY 13:20:34 [core_top_latmul] Copy 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_formal.v' to 'D:\Project_Ansh_Data\ansh_datasets\dhi_memory\dhi_extracted\ANSH_Chronicles\02_WORLD_BIBLE\Science_Background\Ansh_108_Core_Artifacts\core_top_latmul\src\core_top_formal.v'.
+SBY 13:20:34 [core_top_latmul] engine_0: smtbmc boolector
+SBY 13:20:34 [core_top_latmul] base: starting process &quot;cd core_top_latmul/src&amp; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 13:20:34 [core_top_latmul] base: finished (returncode=0)
+SBY 13:20:34 [core_top_latmul] prep: starting process &quot;cd core_top_latmul/model&amp; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 13:20:36 [core_top_latmul] prep: finished (returncode=0)
+SBY 13:20:36 [core_top_latmul] smt2: starting process &quot;cd core_top_latmul/model&amp; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 13:20:37 [core_top_latmul] smt2: finished (returncode=0)
+SBY 13:20:37 [core_top_latmul] engine_0: starting process &quot;cd core_top_latmul&amp; yosys-smtbmc -s boolector --presat --unroll --noprogress -t 16  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Solver: boolector
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 13:20:37 [core_top_latmul] engine_0: ##   0:00:00  Status: passed
+SBY 13:20:37 [core_top_latmul] engine_0: finished (returncode=0)
+SBY 13:20:37 [core_top_latmul] engine_0: Status returned by engine: pass
+SBY 13:20:37 [core_top_latmul] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:03 (3)
+SBY 13:20:37 [core_top_latmul] summary: Elapsed process time unvailable on Windows
+SBY 13:20:37 [core_top_latmul] summary: engine_0 (smtbmc boolector) returned pass
+SBY 13:20:37 [core_top_latmul] summary: engine_0 did not produce any traces
+SBY 13:20:37 [core_top_latmul] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

@@ -1,0 +1,16 @@
+4. Executing LTP pass (find longest path).
+
+Longest topological path in rns_add (length=12):
+    0: \y [3]
+    1: $techmap2032$abc$1949$auto$blifparse.cc:557:parse_blif$1953.A [0] (via $iopadmap$rns_add.y_3)
+    2: $auto$alumacc.cc:512:replace_alu$1224.X [3] (via $abc$1949$auto$blifparse.cc:557:parse_blif$1953)
+    3: $auto$alumacc.cc:512:replace_alu$1224.CO [3] (via $auto$alumacc.cc:512:replace_alu$1224.genblk1.slice[0].genblk1.carry4)
+    4: $auto$alumacc.cc:512:replace_alu$1224.CO [7] (via $auto$alumacc.cc:512:replace_alu$1224.genblk1.slice[1].genblk1.carry4)
+    5: $auto$alumacc.cc:512:replace_alu$1224.CO [11] (via $auto$alumacc.cc:512:replace_alu$1224.genblk1.slice[2].genblk1.carry4)
+    6: $auto$alumacc.cc:512:replace_alu$1224.Y [12] (via $auto$alumacc.cc:512:replace_alu$1224.genblk1.slice[3].genblk1.carry4)
+    7: \s1 [12] (via $auto$ff.cc:337:slice$1727)
+    8: $techmap1157$ge$rns_add.v:32$6.genblk1.genblk1.G_ (via $abc$1949$auto$blifparse.cc:557:parse_blif$1977)
+    9: $techmap1116$ge$rns_add.v:32$6.Y (via $ge$rns_add.v:32$6.genblk1.slice[0].genblk1.carry4)
+   10: $0\out[13:0] [13] (via $abc$1949$auto$blifparse.cc:557:parse_blif$1982)
+   11: $iopadmap$out [13] (via $auto$ff.cc:337:slice$1714)
+   12: \out [13] (via $iopadmap$rns_add.out_13)

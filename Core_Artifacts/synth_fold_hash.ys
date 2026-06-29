@@ -1,0 +1,4 @@
+read_verilog fold_hash.v
+synth_xilinx -family xc7 -top fold_hash
+tee -o fold_hash_stat.txt stat
+tee -o fold_hash_ltp.txt ltp

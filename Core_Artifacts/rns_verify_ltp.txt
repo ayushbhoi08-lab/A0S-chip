@@ -1,0 +1,10 @@
+4. Executing LTP pass (find longest path).
+
+Longest topological path in rns_verify (length=6):
+    0: \y [13]
+    1: $techmap1643$abc$1629$auto$blifparse.cc:557:parse_blif$1631.A [5] (via $iopadmap$rns_verify.y_13)
+    2: $abc$1629$auto$blifparse.cc:557:parse_blif$1630.A [0] (via $abc$1629$auto$blifparse.cc:557:parse_blif$1631)
+    3: $abc$1629$auto$blifparse.cc:557:parse_blif$1630.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.f1 (via $abc$1629$auto$blifparse.cc:557:parse_blif$1630.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1)
+    4: $0\out_eq[0:0] (via $abc$1629$auto$blifparse.cc:557:parse_blif$1630.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.mux7)
+    5: $iopadmap$out_eq (via $auto$ff.cc:337:slice$1554)
+    6: \out_eq (via $iopadmap$rns_verify.out_eq)

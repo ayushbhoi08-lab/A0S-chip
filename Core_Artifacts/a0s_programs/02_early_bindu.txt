@@ -1,0 +1,6 @@
+# A0S ref 02 -- early bindu (abort). The first mandala is voided WITHOUT folding
+# (a run of >=2 dots), then a real mandala is committed with a single-dot bindu.
+aAAa
+..
+bbAA
+.

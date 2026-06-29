@@ -1,0 +1,5 @@
+core            = rns108a (2 dials, Z/108)
+WNS (core setup)= -0.107 ns
+achieved_period = 4.107 ns
+ROUTED FMAX     = 243.5 MHz
+4-cycle latency = 16.43 ns

@@ -1,0 +1,66 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Thu Jun 25 16:08:53 2026
+| Host         : Reaper running 64-bit major release  (build 9200)
+| Command      : report_timing -setup -max_paths 1 -nworst 1 -file ./phase5_out/worst_path.rpt
+| Design       : rns41580
+| Device       : 7a35t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -5.479ns  (required time - arrival time)
+  Source:                 out_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            out[8]
+                            (output port clocked by clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            4.000ns  (clk rise@4.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.789ns  (logic 3.113ns (65.009%)  route 1.676ns (34.991%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           0.000ns
+  Clock Path Skew:        -4.655ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 4.000 - 4.000 ) 
+    Source Clock Delay      (SCD):    4.655ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  <hidden>
+    N15                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    N15                  IBUF (Prop_ibuf_I_O)         0.962     0.962 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.933    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.029 r  clk_IBUF_BUFG_inst/O
+                         net (fo=71, routed)          1.626     4.655    clk_IBUF_BUFG
+    SLICE_X0Y56          FDRE                                         r  out_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y56          FDRE (Prop_fdre_C_Q)         0.456     5.111 r  out_reg[8]/Q
+                         net (fo=1, routed)           1.676     6.787    out_OBUF[8]
+    E18                  OBUF (Prop_obuf_I_O)         2.657     9.444 r  out_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     9.444    out[8]
+    E18                                                               r  out[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        4.000     4.000 r  <hidden>
+                         clock pessimism              0.000     4.000    <hidden>
+                         clock uncertainty           -0.035     3.965    <hidden>
+                         output delay                -0.000     3.965    <hidden>
+  -------------------------------------------------------------------
+                         required time                          3.965    <hidden>
+                         arrival time                          -9.444    <hidden>
+  -------------------------------------------------------------------
+                         slack                                 -5.479    <hidden>
+
+
+
+

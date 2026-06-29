@@ -1,0 +1,105 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Sun Jun 28 11:04:37 2026
+| Host         : Reaper running 64-bit major release  (build 9200)
+| Command      : report_timing -setup -max_paths 1 -nworst 1 -file ./fold_hash_out/worst_path.rpt
+| Design       : fold_hash
+| Device       : 7a35t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -18.277ns  (required time - arrival time)
+  Source:                 h_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.000ns period=6.000ns})
+  Destination:            h_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@3.000ns period=6.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.000ns  (clk rise@6.000ns - clk rise@0.000ns)
+  Data Path Delay:        24.150ns  (logic 15.808ns (65.457%)  route 8.342ns (34.543%))
+  Logic Levels:           14  (CARRY4=3 DSP48E1=4 LUT3=1 LUT4=3 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.227ns = ( 10.227 - 6.000 ) 
+    Source Clock Delay      (SCD):    4.579ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  <hidden>
+    N15                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    N15                  IBUF (Prop_ibuf_I_O)         0.962     0.962 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.933    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.029 r  clk_IBUF_BUFG_inst/O
+                         net (fo=29, routed)          1.549     4.579    clk_IBUF_BUFG
+    SLICE_X11Y25         FDRE                                         r  h_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y25         FDRE (Prop_fdre_C_Q)         0.456     5.035 r  h_reg[12]/Q
+                         net (fo=2, routed)           0.558     5.592    h_OBUF[12]
+    DSP48_X0Y9           DSP48E1 (Prop_dsp48e1_A[12]_P[20])
+                                                      3.841     9.433 r  hB/P[20]
+                         net (fo=1, routed)           0.861    10.294    hB__0[20]
+    DSP48_X0Y8           DSP48E1 (Prop_dsp48e1_A[20]_P[35])
+                                                      3.841    14.135 r  barrett28_return4/P[35]
+                         net (fo=1, routed)           0.752    14.887    barrett28_return4_n_70
+    DSP48_X0Y11          DSP48E1 (Prop_dsp48e1_A[7]_P[21])
+                                                      3.841    18.728 r  barrett28_return3__0/P[21]
+                         net (fo=1, routed)           0.438    19.166    barrett28_return3__0_n_84
+    DSP48_X0Y10          DSP48E1 (Prop_dsp48e1_C[21]_P[11])
+                                                      1.820    20.986 r  barrett28_return2/P[11]
+                         net (fo=5, routed)           1.192    22.178    barrett28_return2_n_94
+    SLICE_X14Y26         LUT4 (Prop_lut4_I1_O)        0.124    22.302 r  h[13]_i_38/O
+                         net (fo=1, routed)           0.452    22.754    h[13]_i_38_n_0
+    SLICE_X14Y26         LUT5 (Prop_lut5_I2_O)        0.124    22.878 r  h[13]_i_21/O
+                         net (fo=1, routed)           0.304    23.182    h[13]_i_21_n_0
+    SLICE_X14Y25         LUT5 (Prop_lut5_I3_O)        0.124    23.306 r  h[13]_i_14/O
+                         net (fo=28, routed)          0.850    24.156    barrett28_return1
+    SLICE_X13Y23         LUT4 (Prop_lut4_I1_O)        0.124    24.280 r  h[3]_i_10/O
+                         net (fo=1, routed)           0.000    24.280    h[3]_i_10_n_0
+    SLICE_X13Y23         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    24.812 r  h_reg[3]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    24.812    h_reg[3]_i_2_n_0
+    SLICE_X13Y24         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    24.926 r  h_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    24.935    h_reg[7]_i_2_n_0
+    SLICE_X13Y25         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    25.248 r  h_reg[11]_i_2/O[3]
+                         net (fo=4, routed)           1.025    26.273    h_reg[11]_i_2_n_4
+    SLICE_X9Y24          LUT4 (Prop_lut4_I1_O)        0.306    26.579 r  h[13]_i_8/O
+                         net (fo=1, routed)           0.536    27.115    h[13]_i_8_n_0
+    SLICE_X8Y24          LUT6 (Prop_lut6_I2_O)        0.124    27.239 r  h[13]_i_4/O
+                         net (fo=14, routed)          0.600    27.840    next_h1
+    SLICE_X9Y23          LUT3 (Prop_lut3_I1_O)        0.124    27.964 r  h[2]_i_1/O
+                         net (fo=2, routed)           0.765    28.729    next_h[2]
+    SLICE_X11Y21         FDRE                                         r  h_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        6.000     6.000 r  <hidden>
+    N15                                               0.000     6.000 r  clk
+                         net (fo=0)                   0.000     6.000    clk
+    N15                  IBUF (Prop_ibuf_I_O)         0.828     6.828 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868     8.696    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     8.787 r  clk_IBUF_BUFG_inst/O
+                         net (fo=29, routed)          1.439    10.227    clk_IBUF_BUFG
+    SLICE_X11Y21         FDRE                                         r  h_reg[2]/C
+                         clock pessimism              0.322    10.549    <hidden>
+                         clock uncertainty           -0.035    10.513    <hidden>
+    SLICE_X11Y21         FDRE (Setup_fdre_C_D)       -0.061    10.452    h_reg[2]
+  -------------------------------------------------------------------
+                         required time                         10.452    <hidden>
+                         arrival time                         -28.729    <hidden>
+  -------------------------------------------------------------------
+                         slack                                -18.277    <hidden>
+
+
+
+

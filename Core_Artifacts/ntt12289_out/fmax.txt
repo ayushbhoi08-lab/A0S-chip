@@ -1,0 +1,5 @@
+core            = ntt_mul12289 (NTT prime q=12289, Barrett)
+WNS (core setup)= -5.146 ns
+achieved_period = 9.146 ns
+ROUTED FMAX     = 109.3 MHz
+4-cycle latency = 36.58 ns

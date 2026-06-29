@@ -1,0 +1,6 @@
+# gAyatrI mantra (Rgveda 3.62.10), Harvard-Kyoto ASCII.
+# laghu = lowercase a-z (bit 0), guru = UPPERCASE A-Z (bit 1); all else ignored.
+oM bhUr bhuvaH svaH
+tat savitur vareNyaM
+bhargo devasya dhImahi
+dhiyo yo naH pracodayAt

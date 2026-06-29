@@ -1,0 +1,4 @@
+read_verilog core_top.v opcode_decode.v result_mode.v rns_reduce.v tick_counter.v ntt_mul12289.v rns_add.v rns_sub.v rns_verify.v fold_hash.v
+synth_xilinx -family xc7 -top core_top
+tee -o core_top_stat.txt stat
+tee -o core_top_ltp.txt ltp

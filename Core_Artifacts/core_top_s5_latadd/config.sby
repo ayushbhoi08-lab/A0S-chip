@@ -1,0 +1,24 @@
+[options]
+mode bmc
+depth 12
+depth 12
+
+[engines]
+smtbmc boolector
+
+[script]
+read_verilog -formal core_top.v opcode_decode.v result_mode.v rns_reduce.v tick_counter.v ntt_mul12289.v rns_add.v rns_sub.v rns_verify.v fold_hash.v core_top_s5_formal.v
+prep -top ctf_latadd
+
+[files]
+core_top.v
+opcode_decode.v
+result_mode.v
+rns_reduce.v
+tick_counter.v
+ntt_mul12289.v
+rns_add.v
+rns_sub.v
+rns_verify.v
+fold_hash.v
+core_top_s5_formal.v

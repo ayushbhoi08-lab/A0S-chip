@@ -1,0 +1,5 @@
+core            = rns540 (3 dials, Z/540)
+WNS (core setup)= -1.065 ns
+achieved_period = 5.065 ns
+ROUTED FMAX     = 197.4 MHz
+4-cycle latency = 20.26 ns

@@ -1,0 +1,11 @@
+[options]
+mode bmc
+depth 10
+[engines]
+smtbmc boolector
+[script]
+read_verilog -formal ntt_mul12289.v ntt_mul12289_formal.v
+prep -top ntt_mul12289_formal
+[files]
+ntt_mul12289.v
+ntt_mul12289_formal.v

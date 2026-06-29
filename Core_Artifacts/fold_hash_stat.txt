@@ -1,0 +1,28 @@
+
+3. Printing statistics.
+
+=== fold_hash ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      147 wires
+     1484 wire bits
+       19 public wires
+      343 public wire bits
+        7 ports
+       47 port bits
+      257 cells
+        1   BUFG
+       35   CARRY4
+        6   DSP48E1
+       14   FDRE
+        1   FDSE
+       32   IBUF
+       38   INV
+       50   LUT2
+       29   LUT3
+        2   LUT4
+        4   LUT5
+       30   LUT6
+       15   OBUF
+

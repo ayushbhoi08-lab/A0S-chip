@@ -1,0 +1,10 @@
+# A0S ref 09 -- SCAN readout traversal (^d). A '^' sets the readout order; the
+# last scan wins. Cardinal scans flow straight; diagonal scans are corner-to-corner
+# zig-zag (full-108 coverage despite gcd(9,12)=3). Here a row-striped grid is read
+# out South (column-major) instead of the default Purva (row-major).
+AAAAAAAAAAAA
+aaaaaaaaaaaa
+AAAAAAAAAAAA
+aaaaaaaaaaaa
+^3
+.

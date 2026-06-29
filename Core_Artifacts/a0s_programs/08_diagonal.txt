@@ -1,0 +1,7 @@
+# A0S ref 08 -- the 4 diagonal kona ROLLs (one step in BOTH axes).
+#   @2 Agneya(SE)  @4 Nairrta(SW)  @6 Vayavya(NW)  @8 Ishana(NE)
+# Chained rolls compose in textual order; SE then NE then (eka-repeated) SW twice.
+aAaAaAaAaAaA
+AaAaAaAaAaAa
+@2 @8 2@4
+.
