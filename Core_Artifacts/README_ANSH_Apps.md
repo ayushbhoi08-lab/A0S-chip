@@ -18,6 +18,7 @@ All numbers are measured or proven; negative results are kept; no number is a ho
 | **A-FP** | Content fingerprinting / dedup (wide multi-chain hash) | DONE | 6/6 | `Ansh_108_Core_AFP_Fingerprint.md` |
 | **A-PQC** | Falcon negacyclic NTT on the 12289 lane | DONE | 8/8 | `Ansh_108_Core_APQC_FalconNTT.md` |
 | **A-PQC** | Falcon-512 **verify** harness (chip NTT in the loop) | DONE | 9/9 | `Ansh_108_Core_APQC_FalconVerify.md` |
+| **A-PQC** | Falcon wire-format **codec** + real-signature **interop** | DONE | 8/8 + 5/5 | `Ansh_108_Core_APQC_FalconInterop.md` |
 
 Writeups live in `../Science_Background/`. The application directory + class
 firewall is `../Science_Background/Ansh_108_Core_Applications_Directory.md`.
@@ -52,6 +53,8 @@ python apqc_ntt.py                 # self-test gate (8/8)
 python apqc_ntt.py --measure       # op-count benchmark + honest verdict
 python apqc_falcon_verify.py       # Falcon-512 verify harness gate (9/9)
 python apqc_falcon_verify.py --demo  # accept + reject cases with norms
+python apqc_falcon_codec.py        # Falcon wire-format codec self-test (8/8)
+python apqc_interop_vector.py      # interop vs a GENUINE reference signature (5/5)
 ```
 
 ---
