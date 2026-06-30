@@ -173,6 +173,27 @@ def build_signature(salt, s2):
     return bytes([HEAD_SIG]) + bytes(salt) + body
 
 
+def parse_nist_signed_message(sm, mlen, n=N):
+    """Parse a NIST-KAT crypto_sign 'sm' for Falcon. Empirically-confirmed layout:
+        [siglen : 2 bytes BE] [nonce : 40] [message : mlen] [header : 1]
+        [Compress(s2) : siglen-1]
+    The header nibble differs from the standalone 0x39 form (the NIST API emits
+    0x20|logn); we skip the single header byte, then Decompress the remainder.
+    Returns (message, salt, s2)."""
+    if len(sm) < 2 + SALT_LEN + mlen + 1:
+        raise ValueError("signed message too short")
+    slen = (sm[0] << 8) | sm[1]
+    salt = sm[2:2 + SALT_LEN]
+    msg = sm[2 + SALT_LEN:2 + SALT_LEN + mlen]
+    rest = sm[2 + SALT_LEN + mlen:2 + SALT_LEN + mlen + slen]
+    if len(rest) != slen or slen < 1:
+        raise ValueError("signed-message length / siglen mismatch")
+    if (rest[0] & 0x0F) != LOGN:
+        raise ValueError(f"unexpected signature header {rest[0]:#04x}")
+    s2 = decompress_sig(rest[1:], n)            # skip the 1-byte header
+    return msg, salt, s2
+
+
 # --------------------------------------------------------------------------- #
 # self-test (exact round-trips + format/rejection checks)
 # --------------------------------------------------------------------------- #

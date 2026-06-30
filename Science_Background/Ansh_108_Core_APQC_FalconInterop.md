@@ -52,9 +52,10 @@ accepted by the chip's 12289 NTT math — and only when genuine.
   Falcon-512 signatures (header + salt + Compress) — demonstrated on a genuine one.
 - ✅ **Verification-math interop**: HashToPoint + `s2·h` (chip NTT) + norm accept a
   genuine signature and reject tampering.
-- ⚠️ **Vector provenance** is the official *reference implementation*, not the NIST
-  KAT `.rsp`. The reference self-verifies and is authored by a Falcon designer, so
-  this is strong evidence; a NIST-KAT cross-check is the one further canonical step.
+- ✅ **NIST-KAT cross-check now DONE** — see `Ansh_108_Core_APQC_FalconKAT.md`: the
+  chip-NTT verifier accepts all 100 official Falcon-512 KAT signatures (this also
+  closes the pk-byte gap below). The reference-vector test here remains as the
+  first, simplest interop demonstration.
 - ⚠️ **Public-key byte cross-check**: my pk codec is the FIPS `modq_encode` form and
   round-trips the real `h`, but the Prest reference uses a *non-standard headerless*
   pk packing, so it isn't an external pk-byte oracle; the committed
