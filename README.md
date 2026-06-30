@@ -63,6 +63,11 @@ python afp_fingerprint.py           # gate (6/6)
 python afp_fingerprint.py --demo    # dedup over a real corpus
 python afp_fingerprint.py --measure # collision curve vs chain count
 
+# A-AC — acoustic / rhythm fingerprinting (chant domain)
+python aac_acoustic.py              # gate (synthesized audio, no files needed)
+python aac_acoustic.py --demo       # exact-rhythm clustering + the honest limit
+python aac_acoustic.py --wav FILE   # fingerprint a real local WAV (stays local)
+
 # A-PQC — Falcon post-quantum signature verification on the chip's NTT
 python apqc_ntt.py                  # negacyclic NTT gate (8/8)
 python apqc_ntt.py --measure        # op-count benchmark + honest verdict
@@ -98,6 +103,7 @@ A fuller run/status index is in [`Core_Artifacts/README_ANSH_Apps.md`](Core_Arti
 | A-TS notarizer | `python ats_notarizer.py` | 11/11 |
 | A-TS on real RTL | `check_cosim_ats.py` | 5/5 |
 | A-FP fingerprinting | `python afp_fingerprint.py` | 6/6 |
+| A-AC acoustic/rhythm | `python aac_acoustic.py` | ALL PASS |
 | A-PQC Falcon NTT | `python apqc_ntt.py` | 8/8 |
 | A-PQC Falcon verify | `python apqc_falcon_verify.py` | 9/9 |
 | A-PQC Falcon codec | `python apqc_falcon_codec.py` | 8/8 |

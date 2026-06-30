@@ -17,6 +17,7 @@ All numbers are measured or proven; negative results are kept; no number is a ho
 | **A-TS** | Tamper-evident timestamped notarizer (proof-of-order) | DONE + **RTL echo** | 11/11 + co-sim 5/5 | `Ansh_108_Core_ATS_Notarizer.md`, `..._ATS_CoSim.md` |
 | **A-FP** | Content fingerprinting / dedup (wide multi-chain hash) | DONE | 6/6 | `Ansh_108_Core_AFP_Fingerprint.md` |
 | **A-PQC** | Falcon negacyclic NTT on the 12289 lane | DONE | 8/8 | `Ansh_108_Core_APQC_FalconNTT.md` |
+| **A-AC** | Acoustic / rhythm fingerprinting (chant domain) | DONE | gate pass | `Ansh_108_Core_AAC_Acoustic.md` |
 | **A-PQC** | Falcon-512 **verify** harness (chip NTT in the loop) | DONE | 9/9 | `Ansh_108_Core_APQC_FalconVerify.md` |
 | **A-PQC** | Falcon wire-format **codec** + real-signature **interop** | DONE | 8/8 + 5/5 | `Ansh_108_Core_APQC_FalconInterop.md` |
 | **A-PQC** | **NIST KAT** cross-check (100 official vectors) | DONE | 100/100 | `Ansh_108_Core_APQC_FalconKAT.md` |
@@ -48,6 +49,11 @@ python check_cosim_ats.py          # gate: routed core_top == chain-0 stamp (5/5
 python afp_fingerprint.py          # self-test gate (6/6)
 python afp_fingerprint.py --measure  # collision curve vs chain count (measured)
 python afp_fingerprint.py --demo   # dedup over the real chant + program corpus
+
+# A-AC — acoustic / rhythm fingerprinting (chant domain)
+python aac_acoustic.py             # self-test gate (synthesized audio)
+python aac_acoustic.py --demo      # exact-rhythm clustering + the honest limit
+python aac_acoustic.py --wav FILE  # fingerprint a real local WAV (not committed)
 
 # A-PQC — Falcon NTT on the 12289 lane
 python apqc_ntt.py                 # self-test gate (8/8)
