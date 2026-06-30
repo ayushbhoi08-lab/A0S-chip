@@ -17,6 +17,7 @@ All numbers are measured or proven; negative results are kept; no number is a ho
 | **A-TS** | Tamper-evident timestamped notarizer (proof-of-order) | DONE + **RTL echo** | 11/11 + co-sim 5/5 | `Ansh_108_Core_ATS_Notarizer.md`, `..._ATS_CoSim.md` |
 | **A-FP** | Content fingerprinting / dedup (wide multi-chain hash) | DONE | 6/6 | `Ansh_108_Core_AFP_Fingerprint.md` |
 | **A-PQC** | Falcon negacyclic NTT on the 12289 lane | DONE | 8/8 | `Ansh_108_Core_APQC_FalconNTT.md` |
+| **A-PQC** | Falcon-512 **verify** harness (chip NTT in the loop) | DONE | 9/9 | `Ansh_108_Core_APQC_FalconVerify.md` |
 
 Writeups live in `../Science_Background/`. The application directory + class
 firewall is `../Science_Background/Ansh_108_Core_Applications_Directory.md`.
@@ -49,6 +50,8 @@ python afp_fingerprint.py --demo   # dedup over the real chant + program corpus
 # A-PQC — Falcon NTT on the 12289 lane
 python apqc_ntt.py                 # self-test gate (8/8)
 python apqc_ntt.py --measure       # op-count benchmark + honest verdict
+python apqc_falcon_verify.py       # Falcon-512 verify harness gate (9/9)
+python apqc_falcon_verify.py --demo  # accept + reject cases with norms
 ```
 
 ---
