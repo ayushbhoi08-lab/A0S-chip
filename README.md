@@ -67,6 +67,9 @@ python afp_fingerprint.py --measure # collision curve vs chain count
 python aac_acoustic.py              # gate (synthesized audio, no files needed)
 python aac_acoustic.py --demo       # exact-rhythm clustering + the honest limit
 python aac_acoustic.py --wav FILE   # fingerprint a real local WAV (stays local)
+# optional: fingerprint the project's VALIDATED Laghu/Guru analysis
+#   (needs numpy/librosa/scipy + the ChandasTokenizer; nothing bundled here)
+python aac_acoustic.py --chandas FILE.wav --backend <path-to-03_RESEARCH_RHYTHM/Backend>
 
 # A-PQC — Falcon post-quantum signature verification on the chip's NTT
 python apqc_ntt.py                  # negacyclic NTT gate (8/8)

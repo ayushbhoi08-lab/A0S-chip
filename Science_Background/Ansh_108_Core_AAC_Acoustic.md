@@ -26,6 +26,11 @@ does the FOLD.
 So the honest use cases are **exact dedup, provenance/integrity of a specific
 rendition, and order-sensitive rhythm signatures** — not similarity search.
 
+**Two feature front-ends, one chip backend:** (a) a built-in **stdlib RMS rhythm
+proxy** (runs anywhere, no deps), and (b) the project's **validated Laghu/Guru
+engine** (`fold_lg_sequence` over the ChandasTokenizer output — §4). Both end in the
+same proven multi-chain FOLD; the chip's job is identical either way.
+
 ---
 
 ## 2. Verification gate — ALL PASS (synthesized audio, no files committed)
@@ -64,29 +69,59 @@ recording to fingerprint it privately; nothing is uploaded or committed.
 
 ---
 
-## 4. Honesty ledger
+## 4. Validated Laghu/Guru extractor (chandas) — wired in
+
+The RMS rhythm code is a stdlib proxy. The project's **validated** Laghu/Guru engine
+is the `ChandasTokenizer` in `03_RESEARCH_RHYTHM/` (librosa spectral-flux onsets →
+syllable durations → L/G by duration vs the adaptive median → Anuṣṭubh pādas). A-AC
+now fingerprints **that** real analysis:
+
+- `fold_lg_sequence("LGGLL…")` — the **chip's job**: FOLD a Laghu/Guru sequence
+  (G→1, L→0) into the ~108-bit fingerprint. Pure, stdlib, committed, and tested
+  (determinism, sensitivity, order, chain 0 == golden FOLD).
+- `python aac_acoustic.py --chandas FILE.wav [--backend DIR]` — runs the validated
+  tokenizer (lazy import by path; needs `numpy/librosa/scipy`, **not** bundled here)
+  and FOLDs its L/G output. The tokenizer and any audio stay **outside** this repo.
+
+**Validated end-to-end (this session, local):** a real Gītā recitation →
+ChandasTokenizer → **64 L / 26 G / 116 mātrās** → a stable 108-bit fingerprint
+(`b0debe54…`). The bridge runs the *actual* validated engine; only its L/G string
+crosses into the chip. (Onset detection is tuning-sensitive: smooth isolated-vocal
+takes can yield few/no onsets at the default threshold — a property of the tokenizer,
+not the fingerprint; pass a lower `threshold` for sustained vocals.)
+
+So the fingerprint is now over the **real rhythm analysis**, not the RMS proxy —
+while the committed gate stays stdlib-only (it tests `fold_lg_sequence` on synthetic
+L/G strings, so a fresh clone needs no `pip install`).
+
+---
+
+## 5. Honesty ledger
 
 - ✅ Reuses the proven multi-chain FOLD (chain 0 == golden FOLD); stdlib-only (`wave`),
   runs on a fresh clone with no `pip install`.
 - ✅ The non-perceptual, noise-sensitive nature is **measured and stated**, not hidden.
-- ⚠️ Class B: the feature extractor is deliberately simple (RMS rhythm code). Richer
-  host features (librosa MFCC/chroma/onset) could be swapped in — but that does not
-  make FOLD perceptual; robustness would still require a similarity-preserving hash
-  (LSH), which FOLD is not.
-- ⚠️ "Rhythm code" is a coarse stress proxy, not the validated Laghu/Guru analysis in
-  `03_RESEARCH_RHYTHM/` — it's a fingerprint feature, not a rhythm-science claim.
+- ✅ The **validated** Laghu/Guru analysis (ChandasTokenizer) is now the real feature
+  front-end (§4); the chip fingerprints its L/G output, not just the RMS proxy.
+- ⚠️ Two front-ends, both honest: the stdlib RMS proxy (a coarse stress feature, not a
+  rhythm-science claim) and the validated chandas engine (the real analysis, needs
+  librosa). Either way FOLD stays an **exact** hash — making it perceptual/robust would
+  require a similarity-preserving hash (LSH), which FOLD is not.
+- ⚠️ Chandas onset detection is tuning-sensitive (threshold per recording); a 0-syllable
+  result is a tokenizer property, not a fingerprint failure.
 - ⛔ Not speaker/chant recognition, not similarity search, not transcription.
 
 ---
 
-## 5. Where it goes next
+## 6. Where it goes next
 
-- Swap in a similarity-preserving front end (quantized onset histogram or an LSH over
-  MFCCs) if *grouping by similarity* is the goal — then FOLD the LSH bucket id.
-- Tie to the real Laghu/Guru extractor in `03_RESEARCH_RHYTHM/` to fingerprint the
-  *validated* rhythm code rather than the RMS proxy.
+- For *grouping by similarity*, add a similarity-preserving front end (quantized onset
+  histogram or an LSH over MFCCs), then FOLD the LSH bucket id — FOLD alone stays exact.
+- Provenance use: stamp a reciter's certified rendition's L/G fingerprint with A-TS
+  (timestamped, tamper-evident) for a verifiable "this is the reference recitation."
 
 ### Cross-references
 - FOLD source: `Ansh_108_Core_ATS_Notarizer.md` (multi-chain FOLD), `golden_model.py`
+- Validated extractor: `03_RESEARCH_RHYTHM/Backend/chandas_tokenizer_phase1.py`
 - Sibling: `Ansh_108_Core_AFP_Fingerprint.md` (byte-stream fingerprinting)
-- Code: `../Core_Artifacts/aac_acoustic.py` (`--demo`, `--wav FILE`)
+- Code: `../Core_Artifacts/aac_acoustic.py` (`--demo`, `--wav FILE`, `--chandas FILE`)

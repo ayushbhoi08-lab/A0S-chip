@@ -54,6 +54,8 @@ python afp_fingerprint.py --demo   # dedup over the real chant + program corpus
 python aac_acoustic.py             # self-test gate (synthesized audio)
 python aac_acoustic.py --demo      # exact-rhythm clustering + the honest limit
 python aac_acoustic.py --wav FILE  # fingerprint a real local WAV (not committed)
+python aac_acoustic.py --chandas FILE.wav --backend DIR  # fingerprint the VALIDATED
+                                   # Laghu/Guru analysis (needs numpy/librosa/scipy)
 
 # A-PQC — Falcon NTT on the 12289 lane
 python apqc_ntt.py                 # self-test gate (8/8)

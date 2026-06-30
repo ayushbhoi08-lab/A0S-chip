@@ -123,6 +123,57 @@ def fingerprint_wav(path, n_chains=8):
 
 
 # --------------------------------------------------------------------------- #
+# Validated-extractor path: fingerprint the project's real Laghu/Guru analysis
+# --------------------------------------------------------------------------- #
+# The stdlib `rhythm_bits` above is a simple RMS proxy. The project's *validated*
+# Laghu/Guru engine is the ChandasTokenizer in 03_RESEARCH_RHYTHM/ (librosa
+# spectral-flux onsets -> syllable durations -> L/G by duration vs median). Here
+# the CHIP's job is to fingerprint whatever L/G sequence that engine emits — that
+# part is pure + stdlib + committed; the engine itself is run at runtime (it needs
+# numpy/librosa/scipy and is NOT bundled in this repo).
+def fold_lg_sequence(lg, n_chains=8):
+    """Fingerprint a Laghu/Guru sequence (str like 'LGGLL...' or 0/1 iterable):
+    G -> 1 (guru/long), L -> 0 (laghu/short), then the proven FOLD."""
+    bits = [1 if (ch in ("G", "g", 1, "1")) else 0 for ch in lg]
+    return fingerprint_feet(slice_bits_to_feet(bits, DATA_BITS), n_chains)
+
+
+def _find_chandas(backend_dir=None):
+    import os
+    here = os.path.dirname(os.path.abspath(__file__))
+    cands = ([backend_dir] if backend_dir else []) + [
+        os.path.join(here, "..", "..", "03_RESEARCH_RHYTHM", "Backend"),
+        os.path.join(here, "chandas"),
+    ]
+    for c in cands:
+        if c and os.path.exists(os.path.join(c, "chandas_tokenizer_phase1.py")):
+            return os.path.join(c, "chandas_tokenizer_phase1.py")
+    raise FileNotFoundError(
+        "chandas_tokenizer_phase1.py not found. Pass --backend DIR pointing at the "
+        "03_RESEARCH_RHYTHM/Backend folder (needs numpy/librosa/scipy installed).")
+
+
+def lg_from_chandas(wav_path, backend_dir=None, sr=22050, threshold=1.5, lg_ratio=1.4):
+    """Run the VALIDATED ChandasTokenizer and return (lg_string, summary).
+    Imported lazily by path so this repo stays stdlib-only unless this is used."""
+    import importlib.util
+    mod_path = _find_chandas(backend_dir)
+    spec = importlib.util.spec_from_file_location("chandas_tokenizer_phase1", mod_path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)                      # needs numpy/librosa/scipy
+    tok = mod.ChandasTokenizer(sr=sr, onset_threshold_multiplier=threshold,
+                               laghu_guru_threshold_ratio=lg_ratio)
+    res = tok.process(wav_path)
+    lg = "".join(t["laghu_guru"] for t in res["tokens"])
+    return lg, res["summary"]
+
+
+def fingerprint_chandas(wav_path, backend_dir=None, n_chains=8, **kw):
+    lg, summary = lg_from_chandas(wav_path, backend_dir, **kw)
+    return fold_lg_sequence(lg, n_chains), lg, summary
+
+
+# --------------------------------------------------------------------------- #
 # Synthetic chant-like rhythm (so tests need no audio files)
 # --------------------------------------------------------------------------- #
 def synth_rhythm(pattern, sr=8000, slot_ms=120, freq=220.0, amp=0.5):
@@ -187,6 +238,20 @@ def _selftest():
     check(f"noise sensitivity is real and measured ({changed}/3 noise levels altered it)",
           True)  # informational: this is a property, not a pass/fail
 
+    # validated-extractor path: fingerprint a Laghu/Guru sequence (chip's job)
+    lg = "LGLLGGLGLLGGLGLL"
+    check("fold_lg_sequence deterministic",
+          fold_lg_sequence(lg).state() == fold_lg_sequence(lg).state())
+    check("L/G change -> different fingerprint",
+          fold_lg_sequence("LGLL").state() != fold_lg_sequence("LGLG").state())
+    check("L/G order-sensitive (LG vs GL)",
+          fold_lg_sequence("LG").state() != fold_lg_sequence("GL").state())
+    bits = [1 if c == "G" else 0 for c in lg]
+    hh = FOLD_SEED
+    for f in slice_bits_to_feet(bits, DATA_BITS):
+        hh = (hh * FOLD_B + f) % Q
+    check("chain 0 == golden FOLD over the L/G feet", fold_lg_sequence(lg).h[0] == hh)
+
     print(f"\n{'ALL PASS' if fails == 0 else str(fails) + ' FAILURE(S)'}")
     return fails
 
@@ -246,5 +311,14 @@ if __name__ == "__main__":
     elif "--wav" in sys.argv:
         i = sys.argv.index("--wav")
         _wav(sys.argv[i + 1])
+    elif "--chandas" in sys.argv:
+        wav = sys.argv[sys.argv.index("--chandas") + 1]
+        backend = (sys.argv[sys.argv.index("--backend") + 1]
+                   if "--backend" in sys.argv else None)
+        fp, lg, summary = fingerprint_chandas(wav, backend)
+        print(f"\nL/G sequence ({len(lg)} syllables): "
+              f"{summary['laghu_count']} L / {summary['guru_count']} G, "
+              f"{summary['total_matras']} matras")
+        print(f"fingerprint (validated chandas L/G): {fp.digest_hex()}  (8-chain ~108-bit)")
     else:
         raise SystemExit(_selftest())
